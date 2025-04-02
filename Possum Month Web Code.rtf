@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+    <title>Welcome to Possum Month!</title>\
+    <style>\
+        body \{\
+            background: url('https://www.publicdomainpictures.net/pictures/300000/velka/trash-texture.jpg');\
+            color: #00FF00;\
+            font-family: Comic Sans MS, Papyrus, sans-serif;\
+            text-align: center;\
+        \}\
+        .marquee \{\
+            font-size: 24px;\
+            font-weight: bold;\
+            color: #FF0000;\
+            background: yellow;\
+            padding: 5px;\
+        \}\
+        .blink \{\
+            animation: blinker 1s infinite;\
+        \}\
+        @keyframes blinker \{\
+            50% \{ opacity: 0; \}\
+        \}\
+        .hit-counter \{\
+            font-size: 16px;\
+            color: white;\
+            background: black;\
+            display: inline-block;\
+            padding: 5px;\
+            margin-top: 10px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <marquee class="marquee">WELCOME TO POSSUM MONTH, INTERNET TRAVELER!</marquee>\
+    <h1 class="blink">Possum Month is Here!</h1>\
+    <img src="https://media.tenor.com/images/8e17e4b5b4506a6d249ef445e9574cc4/tenor.gif" alt="Dancing Possum">\
+    <p>Possums are nature's finest creation. They eat ticks, scream into the void, and know how to party.</p>\
+    <p>Check out our features:</p>\
+    <ul>\
+        <li><a href="#quiz">Take the Possum Quiz!</a></li>\
+        <li><a href="#potd">Possum of the Day</a></li>\
+        <li><a href="#games">Possum Games (that may or may not work)</a></li>\
+        <li><a href="#guestbook">Sign the Guestbook!</a></li>\
+    </ul>\
+    <p class="hit-counter">You are visitor # <span id="counter">000042</span>!</p>\
+    <script>\
+        document.getElementById('counter').innerText = Math.floor(Math.random() * 99999) + 1;\
+    </script>\
+</body>\
+</html>\
+}
