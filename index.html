@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Possum Month - Is Now!</title>
+    <script src="https://cdn.jsdelivr.net/gh/cake23/turing-fluid@latest/turing-fluid.min.js"></script>
     <style>
         /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif'); /* Possum GIF background */
-            background-repeat: repeat;
-            background-size: 200px 200px; /* Change size of possum images */
             color: white;
             text-align: center;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Hide scrollbars */
         }
         .header {
             background: #FFD700; /* Bright Yellow */
@@ -121,6 +120,13 @@
             audio.play();
             document.getElementById('message').innerText = "Possum Theme Playing!";
         }
+
+        // Initialize Turing Fluid background
+        turingFluid({
+            canvas: document.body, // Apply effect to the body background
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
     </script>
 </body>
 </html>
