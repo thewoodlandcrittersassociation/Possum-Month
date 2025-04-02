@@ -9,13 +9,19 @@
         body {
             font-family: 'Comic Sans MS', sans-serif;
             color: #fff;
-            text-align: center;
+            text-align: center; /* Center all text */
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background: url('https://i.imgur.com/5W9V0ak.gif'); /* Lava Lamp Background */
-            background-size: cover;
+            overflow: hidden; /* Hide scrollbars */
+            background: linear-gradient(135deg, #ffcc00, #ff6600, #ff0000, #cc00ff, #00ccff, #00ff66);
+            background-size: 600% 600%;
+            animation: backgroundAnimation 10s ease infinite; /* Faster color change */
             position: relative;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .header {
             background: rgba(0, 0, 0, 0.8);
@@ -29,6 +35,7 @@
         h1 {
             font-family: 'Comic Sans MS', sans-serif;
         }
+        /* Animation for bounce */
         @keyframes bounce {
             0% { transform: translateY(0); }
             100% { transform: translateY(-20px); }
@@ -40,6 +47,11 @@
             border: 5px dashed #FFD700;
             font-size: 1.5em;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            animation: pulse 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            0% { background-color: rgba(0, 0, 0, 0.7); }
+            100% { background-color: rgba(0, 0, 0, 0.8); }
         }
         /* Button Styles */
         button {
@@ -52,16 +64,46 @@
             font-weight: bold;
             text-transform: uppercase;
             margin: 20px;
+            animation: colorChange 2s infinite alternate;
         }
         button:hover {
             background-color: #FF6347;
             color: white;
         }
+        @keyframes colorChange {
+            0% { background-color: #FFD700; color: black; }
+            100% { background-color: #FF6347; color: white; }
+        }
         .gif-container img {
             width: 150px;
             border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
             position: absolute;
         }
+        /* Random Animations */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+        .float { animation: float 5s infinite; }
+        .spin { animation: spin 5s infinite linear; }
+        .zoom { animation: zoom 5s infinite; }
+        .slide { animation: slide 5s infinite; }
         .footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: #FFD700;
@@ -69,31 +111,102 @@
             font-size: 1.2em;
             margin-top: 50px;
         }
+        /* Decorative Elements */
+        .decorative-element {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 8s infinite;
+        }
+        .rotate {
+            animation: rotate 5s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .scale {
+            animation: scale 3s ease-in-out infinite;
+        }
+        @keyframes scale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+        /* Sign-up link */
+        .signup-link {
+            color: #FFD700;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px;
+            display: inline-block;
+        }
+        .signup-link:hover {
+            color: #FF6347;
+        }
     </style>
 </head>
 <body>
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+
+    <!-- Header Section -->
     <div class="header">Possum Month Is Now!</div>
+
+    <!-- Main Content Section -->
     <div class="main-content">
         <h1>Welcome to the World of Possums!</h1>
         <p>Possums are the unsung heroes of the animal kingdom. Join us in celebrating their amazing abilities, fun quirks, and love for trash!</p>
+
+        <!-- Visitor Counter -->
         <p id="visitor-counter" style="font-size: 1.5em; color: #FFD700;"></p>
+
+        <!-- Button to play Possum Theme Song -->
         <button onclick="playPossumSong()">Play Possum Theme</button>
+
         <p id="message" style="font-size: 1.5em; color: #FFD700;"></p>
+
+        <!-- Sign-up Link -->
         <a href="http://eepurl.com/gYrj6P" class="signup-link" target="_blank">Sign up for Possum Updates!</a>
     </div>
+
+    <!-- Floating Possum GIFs -->
+    <div class="gif-container">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 1" class="float" style="top: 10%; left: 10%; animation-duration: 6s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 2" class="spin" style="top: 30%; left: 70%; animation-duration: 7s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 3" class="zoom" style="top: 50%; left: 40%; animation-duration: 5s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 4" class="slide" style="top: 70%; left: 20%; animation-duration: 4s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 5" class="float" style="top: 80%; left: 80%; animation-duration: 6s;">
+    </div>
+
+    <!-- Additional Decorative Elements -->
+    <div class="decorative-element rotate" style="top: 15%; left: 15%;"></div>
+    <div class="decorative-element scale" style="top: 25%; left: 75%;"></div>
+    <div class="decorative-element rotate" style="top: 55%; left: 55%;"></div>
+    <div class="decorative-element scale" style="top: 75%; left: 25%;"></div>
+
+    <!-- Footer Section -->
     <div class="footer">
         &copy; 2025 Possum Month | Powered by The Woodland Critters Association
     </div>
+
+    <!-- Music Script -->
     <script>
         function playPossumSong() {
             var audio = new Audio('https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/files/42a3543f-4d9c-b028-4c36-23a1407de2ae/Sades_Is_Possum.m4a');
             audio.play();
             document.getElementById('message').innerText = "Possum Theme Playing!";
         }
+
+        // Visitor Counter Script
         function updateVisitorCounter() {
-            var counter = Math.floor(Math.random() * 1000) + 1;
+            var counter = Math.floor(Math.random() * 1000) + 1; // Random number between 1 and 1000
             document.getElementById('visitor-counter').innerText = "Visitor Count: " + counter;
         }
+
         updateVisitorCounter();
     </script>
 </body>
