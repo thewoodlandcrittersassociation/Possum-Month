@@ -6,96 +6,98 @@
     <title>Welcome to Possum Month!</title>
     <style>
         body {
-            background: linear-gradient(45deg, #FF6347, #32CD32, #FFD700);
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            font-family: Arial, sans-serif;
             text-align: center;
-            color: white;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
-            border: 5px solid #000;
+            border: 1px solid #ddd;
             padding: 20px;
-            width: 80%;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
             background-color: #fff;
-            color: black;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            color: #333;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            font-size: 3em;
-            color: #FF1493;
-            text-transform: uppercase;
+            font-size: 2.5em;
+            color: #4CAF50;
         }
         h2 {
             font-size: 2em;
-            color: #FFFF00;
+            color: #8BC34A;
         }
         .marquee {
-            font-size: 28px;
+            font-size: 1.2em;
             font-weight: bold;
-            background: yellow;
+            background: #FFEB3B;
             padding: 5px;
-            color: red;
+            color: #D32F2F;
         }
         .gif-container {
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
+            justify-content: center;
             margin: 20px 0;
         }
         .gif-container img {
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             height: auto;
-            border: 3px solid #FF6347;
+            border: 2px solid #4CAF50;
             padding: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         a {
-            color: #32CD32;
+            color: #4CAF50;
             text-decoration: none;
             font-weight: bold;
         }
         a:hover {
-            color: #FF6347;
+            color: #8BC34A;
         }
         .hit-counter {
-            font-size: 20px;
-            color: white;
-            background: black;
+            font-size: 1em;
+            color: #333;
+            background: #f4f4f4;
             display: inline-block;
             padding: 5px;
+            margin-top: 10px;
         }
         footer {
             margin-top: 30px;
-            font-size: 16px;
-            color: #FF6347;
+            font-size: 0.9em;
+            color: #888;
         }
         button {
-            background-color: #FFD700;
+            background-color: #FFEB3B;
             border: none;
             padding: 10px 20px;
-            font-size: 1.2em;
-            color: black;
+            font-size: 1em;
+            color: #333;
             cursor: pointer;
             margin: 10px;
         }
         button:hover {
-            background-color: #FF6347;
-            color: white;
+            background-color: #FFC107;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Marquee with Possum Month welcome -->
-        <marquee class="marquee">WELCOME TO THE EPIC POSSUM MONTH!</marquee>
+        <div class="marquee">WELCOME TO THE EPIC POSSUM MONTH!</div>
         
         <h1>Possum Month is Here!</h1>
 
         <!-- MIDI Music Control -->
         <button onclick="toggleMusic()">Play/Pause Possum Tunes</button>
-        <embed src="https://www.myinstants.com/media/sounds/8bit-mario-theme.mid" id="midi" autostart="false" loop="true" width="0" height="0">
+        <audio src="https://www.myinstants.com/media/sounds/8bit-mario-theme.mid" id="midi" loop></audio>
         
         <!-- Possum GIFs -->
         <div class="gif-container">
