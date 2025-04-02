@@ -3,139 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Possum Month!</title>
+    <title>Possum Month - The 90s Are Back!</title>
     <style>
+        /* General Styles */
         body {
-            background: linear-gradient(45deg, #4CAF50, #8BC34A);
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: #FF6347; /* Bright red */
+            color: white;
             text-align: center;
-            color: #333;
             margin: 0;
             padding: 0;
         }
-        .container {
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            color: #333;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        .header {
+            background: #FFD700; /* Bright Yellow */
+            padding: 30px;
+            font-size: 4em;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+            animation: bounce 1s ease-in-out infinite alternate;
         }
         h1 {
-            font-size: 2.5em;
-            color: #4CAF50;
+            font-family: 'Comic Sans MS', sans-serif;
         }
-        h2 {
-            font-size: 2em;
-            color: #8BC34A;
+        /* Animation for bounce */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
         }
-        .marquee {
+        .main-content {
+            background: #32CD32; /* Bright Green */
+            padding: 20px;
+            margin-top: 50px;
+            border: 5px dashed #000;
+            font-size: 1.5em;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            animation: pulse 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            0% { background-color: #32CD32; }
+            100% { background-color: #228B22; }
+        }
+        /* Button Styles */
+        button {
+            background-color: #FFD700;
+            padding: 15px 25px;
+            border: none;
             font-size: 1.2em;
+            color: black;
+            cursor: pointer;
             font-weight: bold;
-            background: #FFEB3B;
-            padding: 5px;
-            color: #D32F2F;
+            text-transform: uppercase;
+            margin: 20px;
+            animation: colorChange 2s infinite alternate;
+        }
+        button:hover {
+            background-color: #FF6347;
+            color: white;
+        }
+        @keyframes colorChange {
+            0% { background-color: #FFD700; color: black; }
+            100% { background-color: #FF6347; color: white; }
         }
         .gif-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
             justify-content: center;
-            margin: 20px 0;
+            gap: 20px;
+            margin-top: 30px;
         }
         .gif-container img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border: 2px solid #4CAF50;
-            padding: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
         }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #8BC34A;
-        }
-        .hit-counter {
-            font-size: 1em;
-            color: #333;
-            background: #f4f4f4;
-            display: inline-block;
-            padding: 5px;
-            margin-top: 10px;
-        }
-        footer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #888;
-        }
-        button {
-            background-color: #FFEB3B;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            color: #333;
-            cursor: pointer;
-            margin: 10px;
-        }
-        button:hover {
-            background-color: #FFC107;
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Marquee with Possum Month welcome -->
-        <div class="marquee">WELCOME TO THE EPIC POSSUM MONTH!</div>
-        
-        <h1>Possum Month is Here!</h1>
+    <!-- Header Section -->
+    <div class="header">Possum Month is Here!</div>
 
-        <!-- MIDI Music Control -->
-        <button onclick="toggleMusic()">Play/Pause Possum Tunes</button>
-        <audio src="https://www.myinstants.com/media/sounds/8bit-mario-theme.mid" id="midi" loop></audio>
-        
-        <!-- Possum GIFs -->
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h1>Celebrate the Ultimate Party Animal!</h1>
+        <p>Possums are the unsung heroes of the animal kingdom. Join us in celebrating their amazing abilities, fun quirks, and love for trash!</p>
+
+        <!-- Button to play Possum Theme Song (using MIDI or music file) -->
+        <button onclick="playPossumSong()">Play Possum Theme</button>
+
+        <p id="message" style="font-size: 1.5em; color: yellow;"></p>
+
+        <!-- Animated GIFs of Possums -->
         <div class="gif-container">
             <img src="https://media.giphy.com/media/3oEduKZopMnUj4zPQS/giphy.gif" alt="Dancing Possum">
             <img src="https://media.giphy.com/media/9gk8aB2U4Omi6/giphy.gif" alt="Possum Rolling Around">
             <img src="https://media.giphy.com/media/11CmbUwAt0LVyU/giphy.gif" alt="Possum with Trash Can">
         </div>
-
-        <!-- Text Content -->
-        <p>Possums are the unsung heroes of the animal kingdom. They eat ticks, scream into the void, and know how to party.</p>
-        <p>Check out our Possum Month adventures:</p>
-        <ul>
-            <li><a href="#quiz">Take the Possum Quiz!</a></li>
-            <li><a href="#potd">Possum of the Day</a></li>
-            <li><a href="#games">Possum Games (that may or may not work)</a></li>
-            <li><a href="#guestbook">Sign the Guestbook!</a></li>
-        </ul>
-
-        <!-- Hit Counter -->
-        <p class="hit-counter">You are visitor # <span id="counter">000042</span>!</p>
-        
-        <footer>
-            <p>&copy; 2023 The Woodland Critters Association. All Rights Reserved.</p>
-        </footer>
     </div>
 
-    <script>
-        // Counter
-        document.getElementById('counter').innerText = Math.floor(Math.random() * 99999) + 1;
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2023 Possum Month | Powered by The Woodland Critters Association
+    </div>
 
-        // Toggle MIDI Music
-        function toggleMusic() {
-            var audio = document.getElementById('midi');
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
+    <!-- Music Script -->
+    <script>
+        function playPossumSong() {
+            var audio = new Audio('https://www.myinstants.com/media/sounds/8bit-mario-theme.mid');
+            audio.play();
+            document.getElementById('message').innerText = "Possum Theme Playing!";
         }
     </script>
 </body>
