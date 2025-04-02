@@ -15,6 +15,7 @@
             padding: 0;
             overflow: hidden; /* Hide scrollbars */
             position: relative;
+            background-color: #000; /* Black background for better visibility of elements */
         }
         .header {
             background: #FFD700; /* Bright Yellow */
@@ -96,6 +97,15 @@
             50% { transform: translateY(-100px); }
             100% { transform: translateY(0); }
         }
+        /* Additional styles for decorative elements */
+        .decorative-element {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 8s infinite;
+        }
     </style>
 </head>
 <body>
@@ -125,6 +135,14 @@
             <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum Image 6">
         </div>
     </div>
+
+    <!-- Floating Possum GIFs -->
+    <div id="floating-gifs"></div>
+
+    <!-- Decorative Elements -->
+    <div class="decorative-element" style="top: 10%; left: 10%;"></div>
+    <div class="decorative-element" style="top: 20%; left: 80%;"></div>
+    <div class="decorative-element" style="top: 50%; left: 50%;"></div>
 
     <!-- Footer Section -->
     <div class="footer">
