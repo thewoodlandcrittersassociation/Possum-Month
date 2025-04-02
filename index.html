@@ -78,31 +78,13 @@
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
             position: absolute;
+            animation: float 5s infinite; /* Faster animation */
         }
-        /* Random Animations */
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-50px); }
             100% { transform: translateY(0); }
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes zoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.5); }
-            100% { transform: scale(1); }
-        }
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(50px); }
-            100% { transform: translateX(0); }
-        }
-        .float { animation: float 5s infinite; }
-        .spin { animation: spin 5s infinite linear; }
-        .zoom { animation: zoom 5s infinite; }
-        .slide { animation: slide 5s infinite; }
         .footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: #FFD700;
@@ -174,11 +156,11 @@
 
     <!-- Floating Possum GIFs -->
     <div class="gif-container">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 1" class="float" style="top: 10%; left: 10%; animation-duration: 6s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 2" class="spin" style="top: 30%; left: 70%; animation-duration: 7s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 3" class="zoom" style="top: 50%; left: 40%; animation-duration: 5s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 4" class="slide" style="top: 70%; left: 20%; animation-duration: 4s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 5" class="float" style="top: 80%; left: 80%; animation-duration: 6s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 1" style="top: 10%; left: 10%; animation-duration: 6s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 2" style="top: 30%; left: 70%; animation-duration: 7s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 3" style="top: 50%; left: 40%; animation-duration: 5s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 4" style="top: 70%; left: 20%; animation-duration: 4s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 5" style="top: 80%; left: 80%; animation-duration: 6s;">
     </div>
 
     <!-- Additional Decorative Elements -->
