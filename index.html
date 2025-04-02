@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Possum World</title>
+    <title>Possum Month</title>
     <style>
         /* General Styles */
         body {
@@ -78,7 +78,7 @@
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
             position: absolute;
-            animation: float 10s infinite;
+            animation: float 5s infinite; /* Faster animation */
         }
         @keyframes float {
             0% { transform: translateY(0); }
@@ -116,30 +116,51 @@
             50% { transform: scale(1.5); }
             100% { transform: scale(1); }
         }
+        /* Sign-up link */
+        .signup-link {
+            color: #FFD700;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px;
+            display: inline-block;
+        }
+        .signup-link:hover {
+            color: #FF6347;
+        }
     </style>
 </head>
 <body>
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+
     <!-- Header Section -->
-    <div class="header">Possum World</div>
+    <div class="header">Possum Month</div>
 
     <!-- Main Content Section -->
     <div class="main-content">
         <h1>Welcome to the World of Possums!</h1>
         <p>Possums are the unsung heroes of the animal kingdom. Join us in celebrating their amazing abilities, fun quirks, and love for trash!</p>
 
+        <!-- Visitor Counter -->
+        <p id="visitor-counter" style="font-size: 1.5em; color: #FFD700;"></p>
+
         <!-- Button to play Possum Theme Song -->
         <button onclick="playPossumSong()">Play Possum Theme</button>
 
         <p id="message" style="font-size: 1.5em; color: #FFD700;"></p>
+
+        <!-- Sign-up Link -->
+        <a href="http://eepurl.com/gYrj6P" class="signup-link" target="_blank">Sign up for Possum Updates!</a>
     </div>
 
     <!-- Floating Possum GIFs -->
     <div class="gif-container">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 1" style="top: 10%; left: 10%; animation-duration: 12s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 2" style="top: 30%; left: 70%; animation-duration: 15s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 3" style="top: 50%; left: 40%; animation-duration: 10s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 4" style="top: 70%; left: 20%; animation-duration: 8s;">
-        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 5" style="top: 80%; left: 80%; animation-duration: 13s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 1" style="top: 10%; left: 10%; animation-duration: 6s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 2" style="top: 30%; left: 70%; animation-duration: 7s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 3" style="top: 50%; left: 40%; animation-duration: 5s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 4" style="top: 70%; left: 20%; animation-duration: 4s;">
+        <img src="https://mcusercontent.com/4e6d7e300a4170cead55fc4f1/images/d61c8669-b330-379d-d8c1-42cba2cc67c2.gif" alt="Possum GIF 5" style="top: 80%; left: 80%; animation-duration: 6s;">
     </div>
 
     <!-- Additional Decorative Elements -->
@@ -150,7 +171,7 @@
 
     <!-- Footer Section -->
     <div class="footer">
-        &copy; 2025 Possum World | Powered by The Woodland Critters Association
+        &copy; 2025 Possum Month | Powered by The Woodland Critters Association
     </div>
 
     <!-- Music Script -->
