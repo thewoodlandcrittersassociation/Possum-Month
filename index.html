@@ -1,60 +1,140 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2759
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Possum Month!</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #FF6347, #32CD32, #FFD700);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            border: 5px solid #000;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            color: black;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            color: #FF1493;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 2em;
+            color: #FFFF00;
+        }
+        .marquee {
+            font-size: 28px;
+            font-weight: bold;
+            background: yellow;
+            padding: 5px;
+            color: red;
+        }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .gif-container img {
+            width: 200px;
+            height: auto;
+            border: 3px solid #FF6347;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        a {
+            color: #32CD32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #FF6347;
+        }
+        .hit-counter {
+            font-size: 20px;
+            color: white;
+            background: black;
+            display: inline-block;
+            padding: 5px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #FF6347;
+        }
+        button {
+            background-color: #FFD700;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: black;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #FF6347;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Marquee with Possum Month welcome -->
+        <marquee class="marquee">WELCOME TO THE EPIC POSSUM MONTH!</marquee>
+        
+        <h1>Possum Month is Here!</h1>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html>\
-<head>\
-    <title>Welcome to Possum Month!</title>\
-    <style>\
-        body \{\
-            background: url('https://www.publicdomainpictures.net/pictures/300000/velka/trash-texture.jpg');\
-            color: #00FF00;\
-            font-family: Comic Sans MS, Papyrus, sans-serif;\
-            text-align: center;\
-        \}\
-        .marquee \{\
-            font-size: 24px;\
-            font-weight: bold;\
-            color: #FF0000;\
-            background: yellow;\
-            padding: 5px;\
-        \}\
-        .blink \{\
-            animation: blinker 1s infinite;\
-        \}\
-        @keyframes blinker \{\
-            50% \{ opacity: 0; \}\
-        \}\
-        .hit-counter \{\
-            font-size: 16px;\
-            color: white;\
-            background: black;\
-            display: inline-block;\
-            padding: 5px;\
-            margin-top: 10px;\
-        \}\
-    </style>\
-</head>\
-<body>\
-    <marquee class="marquee">WELCOME TO POSSUM MONTH, INTERNET TRAVELER!</marquee>\
-    <h1 class="blink">Possum Month is Here!</h1>\
-    <img src="https://media.tenor.com/images/8e17e4b5b4506a6d249ef445e9574cc4/tenor.gif" alt="Dancing Possum">\
-    <p>Possums are nature's finest creation. They eat ticks, scream into the void, and know how to party.</p>\
-    <p>Check out our features:</p>\
-    <ul>\
-        <li><a href="#quiz">Take the Possum Quiz!</a></li>\
-        <li><a href="#potd">Possum of the Day</a></li>\
-        <li><a href="#games">Possum Games (that may or may not work)</a></li>\
-        <li><a href="#guestbook">Sign the Guestbook!</a></li>\
-    </ul>\
-    <p class="hit-counter">You are visitor # <span id="counter">000042</span>!</p>\
-    <script>\
-        document.getElementById('counter').innerText = Math.floor(Math.random() * 99999) + 1;\
-    </script>\
-</body>\
-</html>\
-}
+        <!-- MIDI Music Control -->
+        <button onclick="toggleMusic()">Play/Pause Possum Tunes</button>
+        <embed src="https://www.myinstants.com/media/sounds/8bit-mario-theme.mid" id="midi" autostart="false" loop="true" width="0" height="0">
+        
+        <!-- Possum GIFs -->
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/3oEduKZopMnUj4zPQS/giphy.gif" alt="Dancing Possum">
+            <img src="https://media.giphy.com/media/9gk8aB2U4Omi6/giphy.gif" alt="Possum Rolling Around">
+            <img src="https://media.giphy.com/media/11CmbUwAt0LVyU/giphy.gif" alt="Possum with Trash Can">
+        </div>
+
+        <!-- Text Content -->
+        <p>Possums are the unsung heroes of the animal kingdom. They eat ticks, scream into the void, and know how to party.</p>
+        <p>Check out our Possum Month adventures:</p>
+        <ul>
+            <li><a href="#quiz">Take the Possum Quiz!</a></li>
+            <li><a href="#potd">Possum of the Day</a></li>
+            <li><a href="#games">Possum Games (that may or may not work)</a></li>
+            <li><a href="#guestbook">Sign the Guestbook!</a></li>
+        </ul>
+
+        <!-- Hit Counter -->
+        <p class="hit-counter">You are visitor # <span id="counter">000042</span>!</p>
+        
+        <footer>
+            <p>&copy; 2023 The Woodland Critters Association. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Counter
+        document.getElementById('counter').innerText = Math.floor(Math.random() * 99999) + 1;
+
+        // Toggle MIDI Music
+        function toggleMusic() {
+            var audio = document.getElementById('midi');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
