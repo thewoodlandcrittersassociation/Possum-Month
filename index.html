@@ -8,21 +8,27 @@
         /* General Styles */
         body {
             font-family: 'Comic Sans MS', sans-serif;
-            color: white;
-            text-align: center;
+            color: #fff;
             margin: 0;
             padding: 0;
             overflow: hidden; /* Hide scrollbars */
-            background-color: black;
+            background: linear-gradient(135deg, #ffcc00, #ff6600, #ff0000, #cc00ff, #00ccff, #00ff66);
+            background-size: 600% 600%;
+            animation: backgroundAnimation 20s ease infinite;
             position: relative;
         }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         .header {
-            background: #FFD700; /* Bright Yellow */
+            background: rgba(0, 0, 0, 0.8);
             padding: 30px;
             font-size: 4em;
             text-transform: uppercase;
             font-weight: bold;
-            color: black;
+            color: #FFD700;
             animation: bounce 1s ease-in-out infinite alternate;
         }
         h1 {
@@ -34,17 +40,17 @@
             100% { transform: translateY(-20px); }
         }
         .main-content {
-            background: #32CD32; /* Bright Green */
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin-top: 50px;
-            border: 5px dashed #000;
+            margin: 50px 10%;
+            border: 5px dashed #FFD700;
             font-size: 1.5em;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
             animation: pulse 1.5s ease-in-out infinite alternate;
         }
         @keyframes pulse {
-            0% { background-color: #32CD32; }
-            100% { background-color: #228B22; }
+            0% { background-color: rgba(0, 0, 0, 0.7); }
+            100% { background-color: rgba(0, 0, 0, 0.8); }
         }
         /* Button Styles */
         button {
@@ -76,17 +82,17 @@
         }
         @keyframes float {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-100px); }
+            50% { transform: translateY(-50px); }
             100% { transform: translateY(0); }
         }
         .footer {
-            background-color: black;
-            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
             padding: 10px;
             font-size: 1.2em;
             margin-top: 50px;
         }
-        /* Additional styles for decorative elements */
+        /* Decorative Elements */
         .decorative-element {
             position: absolute;
             width: 50px;
@@ -95,7 +101,6 @@
             border-radius: 50%;
             animation: float 8s infinite;
         }
-        /* New animations */
         .rotate {
             animation: rotate 5s linear infinite;
         }
@@ -111,29 +116,9 @@
             50% { transform: scale(1.5); }
             100% { transform: scale(1); }
         }
-        /* Background animation */
-        .background-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #66ff00, #00ffcc, #0066ff, #cc00ff, #ff00cc);
-            background-size: 600% 600%;
-            animation: backgroundAnimation 20s ease infinite;
-            z-index: -1;
-        }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
     </style>
 </head>
 <body>
-    <!-- Background Animation -->
-    <div class="background-animation"></div>
-
     <!-- Header Section -->
     <div class="header">Possum World</div>
 
@@ -145,7 +130,7 @@
         <!-- Button to play Possum Theme Song -->
         <button onclick="playPossumSong()">Play Possum Theme</button>
 
-        <p id="message" style="font-size: 1.5em; color: yellow;"></p>
+        <p id="message" style="font-size: 1.5em; color: #FFD700;"></p>
     </div>
 
     <!-- Floating Possum GIFs -->
